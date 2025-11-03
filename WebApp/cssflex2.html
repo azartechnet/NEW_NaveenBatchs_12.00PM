@@ -1,0 +1,44 @@
+<!--
+   flex-direction
+   flex-wrap
+   flex-flow
+   justify-content
+      -center
+      -flex-start
+      -flext-end
+      -space-between
+      -space-around
+      -space-evenly
+   align-items
+       -center
+       -flex-start
+       -flex-end
+       -baseline
+       -stretch
+       -normal
+   align-content
+-->
+
+<style>
+.flex-container
+{
+    display: flex;
+    background-color: aqua;
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    /* flex-direction: row; */
+    flex-direction: row-reverse;
+}
+.flex-container>div
+{
+    background-color: blue;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+</style>
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
