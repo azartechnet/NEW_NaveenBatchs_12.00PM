@@ -1,0 +1,37 @@
+<!--
+ flex-item
+ order
+ flex-grow
+ flex-shrink
+ align-self
+ flex-basis
+-->
+ <style>
+    .flex-container
+    {
+        display: flex;
+        background-color: aqua;
+       
+    }
+    .flex-container>div
+    {
+        background-color: dodgerblue;
+        color:wheat;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+    }
+ </style>
+ <!-- <div class="flex-container">
+     <div style="order:3">1</div>
+     <div style="order:2">2</div>
+     <div style="order:4">3</div>
+     <div style="order:1">4</div>
+ </div> -->
+  <div class="flex-container">
+     <div style="flex-grow: 8;">1</div>
+     <div style="flex-grow: 4;">2</div>
+     <div style="flex-grow: 3;">3</div>
+     <div style="flex-grow: 1;">4</div>
+ </div>
