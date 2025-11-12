@@ -1,0 +1,80 @@
+<style>
+    *
+    {
+        margin: 0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    body
+    {
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #f4f4f4;
+    }
+    nav
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:15px 40px;
+        background-color: rgb(244, 222, 222);
+    }
+    .logo
+    {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color:#f50808;
+        letter-spacing: 2px;
+    }
+    .nav-links
+    {
+        display: flex;
+        gap:30px;
+        list-style: none;
+    }
+    .nav-links a
+    {
+        text-decoration: none;
+        color:#ee0b0b;
+        font-size: medium;
+        transition: color 0.3 ease;
+    }
+    .nav-links a:hover
+    {
+        color:aqua
+    }
+    .nav-links a::after
+    {
+        content:"";
+        position: absolute;
+        left:0px;
+        bottom: -5px;
+        width: 0%;
+        height: 2px;
+        background-color: #2408f5;
+        transition: width 0.3s ease-in;
+    }
+    .nav-links a:hover::after
+    {
+        width: 100%;
+    }
+    .btn
+    {
+        padding:8px 16px;
+        border:2px solid #3708f5;
+        border-radius: 20px;
+        color:#f90404;
+        background-color: transparent;
+        font-size: 0.9em;
+    }
+    
+</style>
+<nav>
+    <div class="logo">MyLogo</div>
+    <ul class="nav-links">
+       <li><a href="">Home</a></li>
+       <li><a href="">About</a></li>
+       <li><a href="">Service</a></li>
+       <li><a href="">Contact</a></li>
+    </ul>
+    <button class="btn">SignUp</button>
+</nav>
