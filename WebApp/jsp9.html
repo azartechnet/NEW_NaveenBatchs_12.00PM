@@ -1,0 +1,25 @@
+<!--Switch Statement-->
+<script>
+    m1=parseInt(prompt("Enter marks for subject 1:"));
+    m2=parseInt(prompt("Enter marks for subject 2:"));
+    m3=parseInt(prompt("Enter marks for subject 3:"));
+    total=m1+m2+m3;
+    avg=total/3;
+    switch(true){
+        case (avg>=90):
+            grade="A";
+            break;
+        case (avg>=80):
+            grade="B";
+            break;
+        case (avg>=70):
+            grade="C";
+            break;
+        case (avg>=60):
+            grade="D";
+            break;
+        default:
+            grade="F";
+    }
+    document.write("Grade: " + grade);
+</script>

@@ -1,0 +1,23 @@
+<!--else if ladder grading system-->
+<script>
+    m1=parseInt(prompt("Enter marks for subject 1:"));
+    m2=parseInt(prompt("Enter marks for subject 2:"));
+    m3=parseInt(prompt("Enter marks for subject 3:"));
+    total=m1+m2+m3;
+    avg=total/3;
+    if(avg>=90){
+        document.write("Grade: A");
+    }
+    else if(avg>=80){
+        document.write("Grade: B");
+    }
+    else if(avg>=70){
+        document.write("Grade: C");
+    }
+    else if(avg>=60){
+        document.write("Grade: D");
+    }
+    else{
+        document.write("Grade: F");
+    }
+</script>

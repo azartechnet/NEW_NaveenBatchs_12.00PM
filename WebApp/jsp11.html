@@ -1,0 +1,14 @@
+<script>
+    // Negative number check using for loop
+    let n = parseInt(prompt("Enter a number:"));
+
+    for (let i = n; i >= 0; i--) {
+        if (i < 0) {
+            document.write(i + " is negative<br>");
+        } else if (i === 0) {
+            document.write(i + " is zero<br>");
+        } else {
+            document.write(i + " is positive<br>");
+        }
+    }
+</script>
