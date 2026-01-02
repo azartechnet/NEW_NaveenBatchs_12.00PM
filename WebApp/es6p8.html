@@ -1,0 +1,16 @@
+<p id="demo"></p>
+<script>
+    const letters=new Set()
+    const a="a";
+    const b="b";
+    const c="c";
+    letters.add(a);
+    letters.add(b);
+    letters.add(c);
+   let text="";
+   for(let x of letters)
+   {
+    text+=x+"<br>"
+   }
+   document.getElementById("demo").innerHTML="Your value is::"+text;
+</script>
