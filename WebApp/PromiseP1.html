@@ -1,0 +1,15 @@
+<script>
+    let promise=new Promise(function(resolve,reject){
+        let success=false;
+        if(success){
+            resolve("Promise resolved successfully.");  
+        }else{
+            reject("Promise rejected.");
+        }
+    });
+    promise.then(function(value){
+        document.write(value);
+    }).catch(function(error){
+        document.write(error);
+    });
+</script>

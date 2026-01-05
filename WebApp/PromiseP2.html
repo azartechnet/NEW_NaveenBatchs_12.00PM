@@ -1,0 +1,11 @@
+<script>
+    let myPromise=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("Promise resolved after 2 seconds.");
+        },2000);    
+        });
+
+    myPromise.then(function(value){
+        document.write(value);
+    });
+</script>

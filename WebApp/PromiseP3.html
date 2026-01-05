@@ -1,0 +1,15 @@
+<script>
+    let loginPromise=new Promise((resolve,reject)=>{
+        let password="1234";
+        if(password==="1234"){
+            resolve("Login successful.");   
+        }else{
+            reject("Login failed. Incorrect password.");
+        }
+    })
+    loginPromise.then((message)=>{
+        document.write(message);
+    }).catch((error)=>{
+        document.write(error);
+    });
+</script>

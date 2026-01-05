@@ -1,0 +1,10 @@
+<script>
+    let task=new Promise((resolve)=>{
+        resolve(10);
+    })
+    task
+    .then(result=>result*2)
+    .then(result=>result+5)
+    .then(result=>{document.write("Final Result: "+result);});
+</script>
+<!--Student Real Time Example(Students Marks)-->
