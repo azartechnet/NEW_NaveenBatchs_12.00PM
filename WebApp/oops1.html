@@ -1,0 +1,24 @@
+<h2>Javascript OOPS Example</h2>
+<button onclick="show()">Show Details</button>
+<script>
+    class Student
+    {
+        constructor(name,age)
+        {
+            this.name=name;
+            this.age=age;
+        }
+        displayDetails()
+        {
+            document.write("Name::"+this.name+"<br>")
+            document.write("Age::"+this.age+"<br><br>")
+        }
+    }
+    function show()
+    {
+        let s1=new Student("azar",22);
+        let s2=new Student("mohamed",66);
+        s1.displayDetails();
+        s2.displayDetails();
+    }
+</script>

@@ -1,0 +1,19 @@
+<script>
+    class Bank
+    {
+        constructor(accNo,holderName,balance)
+        {
+            this.accNo=accNo;
+            this.holderName=holderName;
+            this.balance=balance;
+        }
+        display()
+        {
+            console.log("Account No::",this.accNo);
+            console.log("Name::",this.holderName);
+            console.log("Balance::",this.balance);
+        }
+    }
+    let obj1=new Bank(12345,"azar",100);
+    obj1.display();
+</script>
