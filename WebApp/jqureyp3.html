@@ -1,0 +1,12 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#p1").mouseenter(function(){
+            alert("You entered p1!");
+        })
+         .mouseleave(function(){
+             alert("You left p1!");   
+         });
+    });
+</script>
+<p id="p1">Hover over this paragraph to see an alert.</p>
