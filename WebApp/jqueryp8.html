@@ -1,0 +1,14 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    //toggle
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#p1").toggle(1000);
+            })
+            .mouseleave(function(){
+                $("#p1").toggle(1000);   
+            });
+            })
+</script>
+<p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deleniti similique animi nesciunt earum? Animi deleniti quisquam culpa illum fugit. Eum a quasi dolorem mollitia vel, ut nesciunt tempora neque?</p>
+<button id="btn">Toggle Paragraph</button>
