@@ -1,0 +1,10 @@
+<body>
+    <p id="demo"></p>
+    <script>
+        const txt='{"name":"John", "age":30, "city":"New York"}';
+        const obj = JSON.parse(txt);
+        document.getElementById("demo").innerHTML = obj.name + ", " + obj.age + ", " 
+        + obj.city;
+        document.getElementById("demo").innerHTML=obj.name[0];
+    </script>
+</body>
