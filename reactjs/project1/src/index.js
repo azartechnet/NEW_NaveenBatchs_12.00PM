@@ -78,7 +78,7 @@ r1.render(<MyElem/>)*/
 
 //React Conditional Rendering
 
-const x=prompt("Enter your age:");
+/*const x=prompt("Enter your age:");
 let text="";
 if(x<18){
   text="You are a minor.";
@@ -94,4 +94,95 @@ const AgeCheck=()=>{
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById("root"))
-r1.render(<AgeCheck/>)
+r1.render(<AgeCheck/>)*/
+
+//React Function Components
+
+/*function Sample()
+{
+  return(
+    <div>
+      <h1>This is a Sample Function Component</h1>
+      <p>Function components are a simpler way to write components that only contain a render method and don't have their own state.</p>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<Sample/>)*/
+
+//React function components
+ /*function Greeting()
+  {
+    const name="Azarudeen";
+    return(
+      <div>
+        <h1>Welcome to React Function Components!{name}</h1>
+        <p>This is a simple greeting component.</p>
+      </div>
+    )
+  }
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<Greeting/>)*/
+
+//React Class Components
+/*class Welcome extends React.Component{
+  render(){
+    return(
+      <div>
+        <h1>Welcome to React Class Components!</h1>
+        <p>This is a simple welcome component.</p>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<Welcome/>)*/
+
+//React Class Components
+/*class Profile extends React.Component{
+  render(){
+    const name="Azarudeen";
+    const profession="Web Developer";
+    return(
+      <div>
+        <h1>Profile Component</h1>
+        <p>Name: {name}</p>
+        <p>Profession: {profession}</p>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<Profile/>)*/
+
+//Function into function
+/*function OuterFunction(){
+  function InnerFunction(){
+    return <h2>This is the Inner Function Component</h2>;
+  }
+  return(
+    <div>
+      <h1>This is the Outer Function Component</h1>
+      <InnerFunction/>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<OuterFunction/>)*/
+
+//Class into class
+class OuterClass extends React.Component{
+  InnerClass(){
+    return <h2>This is the Inner Class Component</h2>;
+  }
+  render(){
+    return(
+      <div>
+        <h1>This is the Outer Class Component</h1>
+        {this.InnerClass()}
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<OuterClass/>)
