@@ -171,7 +171,7 @@ const r1=ReactDOM.createRoot(document.getElementById("root"))
 r1.render(<OuterFunction/>)*/
 
 //Class into class
-class OuterClass extends React.Component{
+/*class OuterClass extends React.Component{
   InnerClass(){
     return <h2>This is the Inner Class Component</h2>;
   }
@@ -185,4 +185,84 @@ class OuterClass extends React.Component{
   }
 }
 const r1=ReactDOM.createRoot(document.getElementById("root"))
-r1.render(<OuterClass/>)
+r1.render(<OuterClass/>)*/
+
+//Function Component with props
+
+/*function Sample(props)
+{
+  return(
+    <div>
+      <h1>Hello{props.name}{props.age}</h1>
+      <p>This is paragraph</p>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample name="azar" age="39"/>)*/
+
+//Component in Component
+
+/*function Component1()
+{
+  return(
+    <div>
+      <h1>Hello</h1>
+      <p>Component1</p>
+      <Component2/>
+    </div>
+  )
+}
+function Component2()
+{
+  return(
+    <h1>Component2</h1>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Component1/>)*/
+
+//Constructor using super
+//The constructor in React is a special method used in class components
+// for initializing local state and binding event handlers
+/*class Sample extends React.Component
+{
+   constructor()
+   {
+    super();
+    this.state={name:"azar",age:18}
+   }
+   render()
+   {
+    return(
+      <div>
+        <h1>Hello{this.state.name}</h1>
+        <p>Your age is::{this.state.age}</p>
+      </div>
+    )
+   }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+//constructor without super
+
+class Sample extends React.Component
+{
+  constructor()
+  {
+    //super()
+    this.state={name:"azar",age:30}
+  }
+  render()
+  {
+    return(
+      <div>
+        <h1>Hello,{this.state.name}</h1>
+        <p>Your age is::{this.state.age}</p>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)
