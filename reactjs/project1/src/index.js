@@ -247,7 +247,7 @@ r1.render(<Sample/>)*/
 
 //constructor without super
 
-class Sample extends React.Component
+/*class Sample extends React.Component
 {
   constructor()
   {
@@ -265,4 +265,106 @@ class Sample extends React.Component
   }
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Sample/>)
+r1.render(<Sample/>)*/
+
+//constructor with props
+
+/*class Sample extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state={name:props.name,age:props.age}
+  }
+  render()
+  {
+    return(
+      <div>
+        <h1>Hello,{this.state.name}</h1>
+        <p>Your age is::{this.state.age}</p>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample name="azar" age="30"/>)*/
+
+/*class Couter extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state={count:0};
+  }
+  increment=()=>{
+    this.setState({count:this.state.count+1})
+  }
+  decrement=()=>{
+    this.setState({count:this.state.count-1})
+  }
+  render()
+  {
+    return(
+      <div style={{textAlign:'center'}}>
+        <h1>Counter:{this.state.count}</h1>
+        <button onClick={this.increment}>increment</button>
+        <button onClick={this.decrement}>Decrement</button>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Couter/>)*/
+
+//React Events
+
+/*function Football()
+{
+  const shoot=()=>{
+    alert('Great Shot!!')
+  }
+  return(
+     <div style={{textAlign:'center'}}>
+        <button onClick={shoot}>TakeShoot</button>
+     </div>
+  )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football/>)*/
+
+//Event with Arg
+
+/*unction Football()
+{
+  const shoot=(a)=>{
+    alert(a)
+  }
+  return(
+    <div style={{textAlign:'center'}}>
+      <button onClick={()=>shoot('Greating')}>Take the shot!!!</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football/>)*/
+
+//Event in Form
+
+function MyForm()
+{
+  const handleSubmit=(event)=>{
+    event.preventDefault();
+    alert("FormSubmitted...")
+  }
+  return(
+    <div style={{textAlign:'center'}}>
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="Enter the name"/>
+        <input type="submit" value="Submit"/>
+      </form>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<MyForm/>)
