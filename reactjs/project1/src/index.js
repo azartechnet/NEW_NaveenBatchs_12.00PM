@@ -351,7 +351,7 @@ r1.render(<Football/>)*/
 
 //Event in Form
 
-function MyForm()
+/*function MyForm()
 {
   const handleSubmit=(event)=>{
     event.preventDefault();
@@ -367,4 +367,61 @@ function MyForm()
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<MyForm/>)
+r1.render(<MyForm/>)*/
+
+//Destructring
+
+/*function Welcome({name,age})
+{
+  return(
+    <div>
+      <h1>Hello,{name}</h1>
+      <p>Your age is::{age}</p>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Welcome name="azar" age="35"/>)*/
+
+//Destructuring in class component
+
+/*class Welcome extends React.Component
+{
+  constructor()
+  {
+    super();
+    this.state={name:"azar",age:30}
+  }
+  render()
+  {
+    const {name,age}=this.state;
+    return(
+      <div>
+        <h1>Hello,{name}</h1>
+        <p>Your age is::{age}</p>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Welcome/>)*/
+
+//Destructuring in arrays
+
+function Skills()
+{
+  const skills=["Html","css","js"]
+  const [s1,s2,s3]=skills;
+  return(
+    <div>
+      <h1>MySkills</h1>
+      <ul>
+        <li>{s1}</li>
+        <li>{s2}</li>
+        <li>{s3}</li>
+      </ul>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Skills/>)
