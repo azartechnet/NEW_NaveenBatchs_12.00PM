@@ -408,7 +408,7 @@ r1.render(<Welcome/>)*/
 
 //Destructuring in arrays
 
-function Skills()
+/*function Skills()
 {
   const skills=["Html","css","js"]
   const [s1,s2,s3]=skills;
@@ -424,4 +424,60 @@ function Skills()
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Skills/>)
+r1.render(<Skills/>)*/
+
+//class component(Mounting)
+
+/*class MyComponent extends React.Component
+{
+  constructor(props)
+  {
+    super(props)
+    console.log("Constructor called")
+  }
+  componentDidMount()
+  {
+    console.log("ComponentDidMounted...")
+  }
+  render()
+  {
+    console.log("Render called")
+    return(
+      <h1>Hello React Mounting..</h1>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<MyComponent/>)*/
+
+//class component updating
+
+class Counter extends React.Component
+{
+  constructor()
+  {
+    super();
+    this.state={count:0}
+  }
+  componentDidUpdate(prevProps,prevState)
+  {
+    console.log("ComponentUpdated")
+    console.log("PreviousCount::",prevState.count)
+    console.log("CurrentCount::",this.state.count)
+  }
+  render()
+  {
+    return(
+      <>
+        <h2>Count{this.state.count}</h2>
+        <button onClick={()=>{
+          this.setState({count:this.state.count+1})
+        }}>
+          increment
+        </button>
+      </>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)
