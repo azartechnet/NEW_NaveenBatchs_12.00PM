@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 //Basic Rendering of a React Component
 /*const App=()=>{
@@ -452,7 +452,7 @@ r1.render(<MyComponent/>)*/
 
 //class component updating
 
-class Counter extends React.Component
+/*class Counter extends React.Component
 {
   constructor()
   {
@@ -480,4 +480,59 @@ class Counter extends React.Component
   }
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Counter/>)
+r1.render(<Counter/>)*/
+
+//unmounting componentWillUnmount
+
+/*class Child extends React.Component
+{
+  componentWillUnmount()
+  {
+    console.log("Component unmounted")
+  }
+  render()
+  {
+    return(
+      <h1>Child Component</h1>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Child/>)*/
+
+//Hooks useState
+
+import { useState } from "react";
+import { render } from "@testing-library/react";
+
+/*function Counter()
+{
+  const [count,setCount]=useState(0)
+
+  return(
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={()=>setCount(count+1)}>ClickMe</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)*/
+
+//useEffect
+function Example()
+{
+  const [count,setCount]=useState(0)
+  useEffect(()=>{
+    console.log("Component Rendered or updated")
+  })
+  return(
+    <div>
+      <p>Count::{count}</p>
+      <button onClick={()=>setCount(count+1)}>increment</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Example/>)
+
