@@ -520,7 +520,7 @@ const r1=ReactDOM.createRoot(document.getElementById('root'))
 r1.render(<Counter/>)*/
 
 //useEffect
-function Example()
+/*function Example()
 {
   const [count,setCount]=useState(0)
   useEffect(()=>{
@@ -534,5 +534,131 @@ function Example()
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Example/>)
+r1.render(<Example/>)*/
 
+//useState another Example
+
+/*function Welcome()
+{
+  const [name,setName]=useState("azar")
+  return(
+    <div>
+      <h2>welcome{name}</h2>
+      <input type="text" placeholder="Enter the name is::" onChange={(e)=>setName(e.target.value)}/>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Welcome/>)*/
+
+//useEffect another Example
+
+/*function Timer()
+{
+  const [count,setCount]=useState(0)
+  useEffect(()=>{
+    const timer=setInterval(()=>{
+      setCount((prevCount)=>prevCount+1)
+    }
+    ,1000);
+    return()=>{
+      clearInterval(timer)
+    }
+  }
+  ,[])
+  return(
+    <div>
+      <h2>Timer:{count}seconds</h2>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Timer/>)*/
+
+//without useContext
+
+/*function Component1()
+{
+  const [user,setUser]=useState("azar")
+  return(
+    <div>
+      <h1>Component1</h1>
+      <p>User:{user}</p>
+      <Component2 user={user}/>
+    </div>
+  ) 
+}
+function Component2(props)
+{
+  return(
+    <div>
+      <h1>Component2</h1>
+      <p>User:{props.user}</p>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Component1/>)*/
+
+//with useContext
+/*import { createContext, useContext } from "react";
+
+const UserContext=createContext();
+
+function Component1()
+{
+  const [user,setUser]=useState("azar")
+  return(
+    <UserContext.Provider value={user}>
+      <div>
+        <h1>Component1</h1>
+        <p>User:{user}</p>
+        <Component2/>
+      </div>
+    </UserContext.Provider>
+  ) 
+}
+function Component2()
+{
+  const user=useContext(UserContext)
+  return(
+    <div>
+      <h1>Component2</h1>
+      <p>User:{user}</p>
+      <Component3/>
+    </div>
+  )
+}
+function Component3()
+{
+  const user=useContext(UserContext)
+  return(
+    <div>
+      <h1>Component3</h1>
+      <p>User:{user}</p>
+    </div>
+  )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Component1/>)*/
+
+//React useref
+
+import { useRef } from "react";
+
+function FocusInput()
+{
+  const inputRef=useRef(null)
+  const handleClick=()=>{
+    inputRef.current.focus()
+  }
+  return(
+    <div>
+      <input type="text" ref={inputRef} placeholder="Enter the name"/>
+      <button onClick={handleClick}>Focus the input</button>
+    </div>
+   )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<FocusInput/>)
